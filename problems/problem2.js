@@ -13,14 +13,14 @@
 window.log = console.log;
  
 function fib(num) {
-  return (num < 3) ? num : fib(nm - 1) + fib(num - 2);
+  return (num < 3) ? num : fib(num - 1) + fib(num - 2);
 }
 
 Number.prototype.isEven = function() {
   if (this % 2 === 0) {
     return true;
   }
-}
+};
 
 function fibSum() {
   var i = 1,
@@ -28,13 +28,14 @@ function fibSum() {
       fibValue = fib(i),
       limit = 4000000; // 4 million
       
-  while (fibValue < limit) {
+  while (fibValue <= limit) {
     if (fibValue.isEven()) {
       sum += fibValue;
     }
     i++;
     fibValue = fib(i);  
-  }    
+  }
+  return sum;
 }
 
 var evenFibSum = fibSum();
