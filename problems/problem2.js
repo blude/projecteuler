@@ -17,9 +17,7 @@ function fib(num) {
 }
 
 Number.prototype.isEven = function() {
-  if (this % 2 === 0) {
-    return true;
-  }
+  return (this % 2 === 0) ? true : false;
 };
 
 function fibSum() {
@@ -28,7 +26,7 @@ function fibSum() {
       fibValue = fib(i),
       limit = 4000000; // 4 million
       
-  while (fibValue <= limit) {
+  while (fibValue < limit) {
     if (fibValue.isEven()) {
       sum += fibValue;
     }
