@@ -1,4 +1,6 @@
 /**
+ * Problem #3 - Largest prime factor
+ * 
  * The prime factors of 13195 are 5, 7, 13 and 29.
  * What is the largest prime factor of the number 600851475143 ?
  *
@@ -19,7 +21,7 @@ function factorize(num) {
     }
   }
 
-  return factors + " - Largest is " +factors[factors.length - 1];
+  return factors + " - Largest is " + factors[factors.length - 1];
 }
 
-log('Factors: ' +factorize(600851475143));
+log('Factors: ' + factorize(600851475143));
