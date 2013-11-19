@@ -25,8 +25,8 @@ function hasPalindrome(number) {
   var numDigits = 3;
   
   var product = 0,
-      largPal,
-      palList = [],
+      largestPalindrome,
+      palindromeList = [],
       maxValue = Math.pow(10, numDigits) - 1, 
       x = maxValue,
       y = maxValue;
@@ -35,7 +35,7 @@ function hasPalindrome(number) {
     while(y >= 100) {
       product = x * y;
       if (reverseNumber(product) === product) {
-        palList.push(product);
+        palindromeList.push(product);
       }
       y--;
     }
@@ -43,10 +43,11 @@ function hasPalindrome(number) {
     x--;
   }
   
-  palList.sort(function(a, b) { return b - a; });
+  // sort the list numerically descending
+  palindromeList.sort(function(a, b) { return b - a; });
 
-  largPal = palList[0];
+  largestPalindrome = palindromeList[0];
 
-  console.info("Largest palindrome is: " + largPal);
+  console.info("Largest palindrome is: " + largestPalindrome);
 
 })();
