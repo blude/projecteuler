@@ -12,13 +12,13 @@
 
 // noprotect
 
-function isDivisible(number) {
-  var isEven = true;
+function isDivisibleByAll(number) {
+  var isDivisible = true;
   for (var i = 1; i <= 20; i++) {
-    isEven = (number % i === 0) && isEven;
+    isDivisible = (number % i === 0) && isDivisible;
   }
   
-  return isEven;
+  return isDivisible;
 }
 
 function findSmallestMultiple() {
@@ -26,7 +26,7 @@ function findSmallestMultiple() {
       foundNumber = false;
 
   while (!foundNumber) {
-    if (isDivisible(number)) {
+    if (isDivisibleByAll(number)) {
       foundNumber = true;
       return number;
     }
